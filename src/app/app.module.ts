@@ -10,6 +10,7 @@ import { ClienteModificarComponent } from './components/clientes/cliente-modific
 import { ClienteBorrarComponent } from './components/clientes/cliente-borrar/cliente-borrar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './components/header/header.component';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
     ClienteModificarComponent,
     ClienteBorrarComponent,
     InicioComponent,
-    HeaderComponent
+    HeaderComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
