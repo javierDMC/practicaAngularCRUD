@@ -8,6 +8,8 @@ import { ClientesComponent } from './components/clientes/clientes/clientes.compo
 import { ClienteNuevoComponent } from './components/clientes/cliente-nuevo/cliente-nuevo.component';
 import { ClienteModificarComponent } from './components/clientes/cliente-modificar/cliente-modificar.component';
 import { ClienteBorrarComponent } from './components/clientes/cliente-borrar/cliente-borrar.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ClienteBorrarComponent } from './components/clientes/cliente-borrar/cli
     ClientesComponent,
     ClienteNuevoComponent,
     ClienteModificarComponent,
-    ClienteBorrarComponent
+    ClienteBorrarComponent,
+    InicioComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
