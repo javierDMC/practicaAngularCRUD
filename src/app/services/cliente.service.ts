@@ -58,5 +58,9 @@ export class ClienteService {
   return this.clientes;
  }
 
+ nuevoCliente(cliente:Cliente){
+  this.clientes.push(cliente);
+ }
+
 
 }
