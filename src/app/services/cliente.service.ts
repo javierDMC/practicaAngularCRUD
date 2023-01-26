@@ -9,7 +9,7 @@ export class ClienteService {
   constructor() { }
 
   //declarar la variable cliente array del tipo cliente
-  cliente:Array<Cliente>=[
+  clientes:Array<Cliente>=[
     {
       id:1,
       nombre: 'Ana',
@@ -53,6 +53,10 @@ export class ClienteService {
       votos:0
     }
  ]
+
+ getClientes(){
+  return this.clientes;
+ }
 
 
 }
