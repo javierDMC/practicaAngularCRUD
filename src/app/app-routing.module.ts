@@ -11,10 +11,10 @@ import { InicioComponent } from './components/inicio/inicio.component';
 const routes: Routes = [
   {path:"",component:InicioComponent},
   {path:"clientes", component:ClientesComponent},
-  {path:"cliente", component:ClienteComponent},
-  {path:"cliente/nuevo", component:ClienteNuevoComponent},
-  {path:"cliente/modificar/:id", component:ClienteModificarComponent},
-  {path:"cliente/borrar/:id", component:ClienteBorrarComponent},
+  {path:"cliente/:id", component:ClienteComponent},
+  {path:"nuevo", component:ClienteNuevoComponent},
+  {path:"modificar/:id", component:ClienteModificarComponent},
+  {path:"clientes/borrar/:id", component:ClienteBorrarComponent},
   //la ruta error siempre debe ser la ultima
   {path:"**",component:Error404Component}
 ];

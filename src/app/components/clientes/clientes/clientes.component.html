@@ -6,9 +6,9 @@
     <tr *ngFor="let cliente of clientes" class="border border-dark text-center" >
       <td class="border border-dark">{{cliente.id}}</td>
       <td class="border border-dark">{{cliente.nombre}}</td>
-      <td class="border border-dark"><button class="btn btn-primary m-1">VER</button></td>
+      <td routerLink="/cliente/{{cliente.id}}" class="border border-dark"><button class="btn btn-primary m-1">VER</button></td>
       <td class="border border-dark"><button class="btn btn-warning m-1" >MODIFICAR</button></td>
-      <td class="border border-dark"><button class="btn btn-danger m-1" >BORRAR</button></td>
+      <td routerLink="/clientes/borrar/{{cliente.id}}" class="border border-dark"><button class="btn btn-danger m-1" >BORRAR</button></td>
     </tr>
     </td>
   </table>

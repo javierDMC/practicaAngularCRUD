@@ -59,7 +59,8 @@ getClientes(){
 }
 
 getcliente(id:number){
-  return this.clientes.findIndex(c=>c.id==id);
+  let pos=this.clientes.findIndex(c=>c.id==id);
+  return this.clientes[pos];
 }
 
 nuevoCliente(cliente:Cliente){

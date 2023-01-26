@@ -1,1 +1,11 @@
-<p>cliente-borrar works!</p>
+<div style="margin-left: 35%;">
+  <div class="ml-5 card text-center " style="width: 18rem;">
+    <img src="./../../../../assets/{{cliente.foto}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">¿Desea borrar al parguela con id: {{cliente.id}}?</h5>
+      <p class="card-text">Está a punto de borrar a un cliente de la lista</p>
+      <button (click)="borrar(cliente.id)" routerLink="/clientes" class="btn btn-danger m-2">SI</button>
+      <button routerLink="/clientes" class="btn btn-success m-2">NO</button>
+    </div>
+  </div>
+</div>
