@@ -13,8 +13,8 @@ const routes: Routes = [
   {path:"clientes", component:ClientesComponent},
   {path:"cliente", component:ClienteComponent},
   {path:"cliente/nuevo", component:ClienteNuevoComponent},
-  {path:"cliente/modificar", component:ClienteModificarComponent},
-  {path:"cliente/borrar", component:ClienteBorrarComponent},
+  {path:"cliente/modificar/:id", component:ClienteModificarComponent},
+  {path:"cliente/borrar/:id", component:ClienteBorrarComponent},
   //la ruta error siempre debe ser la ultima
   {path:"**",component:Error404Component}
 ];
