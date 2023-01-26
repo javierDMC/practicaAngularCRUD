@@ -21,7 +21,6 @@ export class ClienteBorrarComponent {
   ngOnInit(){
   //en esta variable cogemos la id
   this.idBorrar=this.miRuta.snapshot.params["id"];
-  console.log(this.idBorrar)
   this.cliente=this.servicioCliente.getcliente(this.idBorrar);
 
 
