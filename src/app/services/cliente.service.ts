@@ -54,13 +54,26 @@ export class ClienteService {
     }
  ]
 
- getClientes(){
+getClientes(){
   return this.clientes;
- }
+}
 
- nuevoCliente(cliente:Cliente){
+getcliente(id:number){
+  return this.clientes.findIndex(c=>c.id==id);
+}
+
+nuevoCliente(cliente:Cliente){
   this.clientes.push(cliente);
- }
+}
+
+modificarCliente(cliente:Cliente){
+  let pos=this.clientes.findIndex(c=>c.id==cliente.id)
+}
+
+borrarCliente(id:number){
+  let pos=this.clientes.findIndex(c=>c.id==id);
+  this.clientes.splice(pos,1);
+}
 
 
 }
