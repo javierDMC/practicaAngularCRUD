@@ -14,43 +14,37 @@ export class ClienteService {
       id:1,
       nombre: 'Ana',
       cargo: 'Programadora' ,
-      foto:'1.jpg',
-      votos:0
+      foto:'1.jpg'
     },
     {
       id:2,
       nombre: 'Elena',
       cargo: 'Administrativa',
-      foto:'2.jpg',
-      votos:0
+      foto:'2.jpg'
     },
     {
       id:3,
       nombre: 'Juan',
       cargo: 'Analista' ,
-      foto:'3.jpg',
-      votos:0
+      foto:'3.jpg'
     },
     {
       id:4,
       nombre: 'Luis',
       cargo: 'Programador' ,
-      foto:'4.jpg',
-      votos:0
+      foto:'4.jpg'
     },
     {
       id:5,
       nombre: 'Maria',
       cargo: 'Diseñadora' ,
-      foto:'5.jpg',
-      votos:0
+      foto:'5.jpg'
     },
     {
       id:6,
       nombre: 'Pedro',
       cargo: 'Marketing' ,
-      foto:'6.jpg',
-      votos:0
+      foto:'6.jpg'
     }
  ]
 

@@ -1,1 +1,19 @@
-<p>cliente-nuevo works!</p>
+<div style="margin-left: 35%;">
+  <div class="ml-5 card text-center " style="width: 18rem;">
+    <h4>FICHA NUEVO CLIENTE</h4>
+    <div class="card-body">
+      <form id="formNuevoCliente" action="#">
+      <a>ID</a>
+      <p class="card-text"><input [(ngModel)]="inputIdNuevo" name="inputIdNuevo" disabled="true" required></p>
+      <a>Nombre</a>
+      <p class="card-text"><input [(ngModel)]="inputNombreNuevo" name="inputNombreNuevo" placeholder="Nombre"></p>
+      <a>Cargo</a>
+      <p class="card-text"><input [(ngModel)]="inputCargoNuevo" name="inputCargoNuevo" placeholder="Cargo"></p>
+      <a>Foto</a>
+      <p class="card-text"><input [(ngModel)]="inputFotoNuevo" name="inputFotoNuevo" placeholder="Foto"></p>
+    </form>
+      <button (click)="nuevoCliente()" routerLink="/clientes" class="btn btn-success m-2">CREAR</button>
+      <button routerLink="/clientes" class="btn btn-secondary m-2">VOLVER</button>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@
       <td class="border border-dark">{{cliente.id}}</td>
       <td class="border border-dark">{{cliente.nombre}}</td>
       <td routerLink="/cliente/{{cliente.id}}" class="border border-dark"><button class="btn btn-primary m-1">VER</button></td>
-      <td class="border border-dark"><button class="btn btn-warning m-1" >MODIFICAR</button></td>
+      <td routerLink="/clientes/modificar/{{cliente.id}}" class="border border-dark"><button class="btn btn-warning m-1" >MODIFICAR</button></td>
       <td routerLink="/clientes/borrar/{{cliente.id}}" class="border border-dark"><button class="btn btn-danger m-1" >BORRAR</button></td>
     </tr>
     </td>
@@ -15,7 +15,7 @@
 
 </div>
 <div class="text-center mt-5">
-  <button class="btn btn-success m-2">Nuevo</button>
+  <button routerLink="/clientes/nuevo" class="btn btn-success m-2">Nuevo</button>
   <button routerLink="/" class="btn btn-secondary m-2">Volver</button>
 </div>
 
