@@ -62,7 +62,8 @@ nuevoCliente(cliente:Cliente){
 }
 
 modificarCliente(cliente:Cliente){
-  let pos=this.clientes.findIndex(c=>c.id==cliente.id)
+  let pos=this.clientes.findIndex(c=>c.id==cliente.id);
+  this.clientes.splice(pos,1,cliente)
 }
 
 borrarCliente(id:number){

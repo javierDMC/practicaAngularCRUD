@@ -10,6 +10,10 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteModificarComponent {
 
+   inputIdModificar!:number;
+   inputNombreModificar!:string;
+   inputCargoModificar!:string;
+   inputFotoModificar!:string;
 
   cliente!:Cliente;
 
@@ -21,10 +25,22 @@ export class ClienteModificarComponent {
   ngOnInit(){
     this.idModificar=this.miRuta.snapshot.params["id"];
     this.cliente=this.servicioModificarCliente.getcliente(this.idModificar);
+    this.inputIdModificar=this.idModificar;
+    this.inputNombreModificar=this.cliente.nombre;
+    this.inputCargoModificar=this.cliente.cargo;
+    // this.inputFotoModificar=this.cliente.foto;
   }
 
-  modificarCliente(clienteModificar:Cliente){
-    this.servicioModificarCliente.modificarCliente(this.cliente);
+  modificarCliente(){
+    let clienteModificado={
+      id:this.inputIdModificar,
+      nombre:this.inputNombreModificar,
+      cargo:this.inputCargoModificar,
+      foto:this.inputFotoModificar
+    }
+
+  this.servicioModificarCliente.modificarCliente(clienteModificado);
+
   }
 
 }

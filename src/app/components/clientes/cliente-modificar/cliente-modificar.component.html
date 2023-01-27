@@ -1,1 +1,17 @@
-<p>cliente-modificar works!</p>
+<div style="margin-left: 35%;">
+  <div class="ml-5 card text-center " style="width: 18rem;">
+    <h4>FICHA Modificar CLIENTE</h4>
+    <div class="card-body">
+      <form id="formModificarCliente" action="#">
+      <a>ID</a>
+      <p class="card-text"><input [(ngModel)]="inputIdModificar" name="inputIdModificar" disabled="true" required class="text-center"></p>
+      <a>Nombre</a>
+      <p class="card-text"><input [(ngModel)]="inputNombreModificar" name="inputNombreModificar" placeholder="Nombre" class="text-center"></p>
+      <a>Cargo</a>
+      <p class="card-text"><input [(ngModel)]="inputCargoModificar" name="inputCargoModificar" placeholder="Cargo" class="text-center"></p>
+    </form>
+      <button (click)="modificarCliente()" routerLink="/clientes" class="btn btn-success m-2">ACEPTAR</button>
+      <button routerLink="/clientes" class="btn btn-secondary m-2">VOLVER</button>
+    </div>
+  </div>
+</div>

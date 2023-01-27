@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
@@ -14,20 +14,20 @@ export class ClienteBorrarComponent {
 
   idBorrar!:number;
 
-  constructor(private servicioCliente:ClienteService,
+  constructor(private servicioBorrarCliente:ClienteService,
               //esto nos permitirá recoger el id del cliente activo
               private miRuta:ActivatedRoute){}
 
   ngOnInit(){
   //en esta variable cogemos la id
   this.idBorrar=this.miRuta.snapshot.params["id"];
-  this.cliente=this.servicioCliente.getcliente(this.idBorrar);
+  this.cliente=this.servicioBorrarCliente.getcliente(this.idBorrar);
 
 
   }
 
   borrar(idBorrar:number){
-    this.servicioCliente.borrarCliente(idBorrar);
+    this.servicioBorrarCliente.borrarCliente(idBorrar);
   }
 
 }
