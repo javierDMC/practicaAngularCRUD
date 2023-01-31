@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cliente-modificar',
   templateUrl: './cliente-modificar.component.html',
@@ -20,7 +20,8 @@ export class ClienteModificarComponent {
   idModificar!:number;
 
   constructor(private servicioModificarCliente:ClienteService,
-              private miRuta:ActivatedRoute){}
+              private miRuta:ActivatedRoute,
+              private miRouter:Router){}
 
   ngOnInit(){
     this.idModificar=this.miRuta.snapshot.params["id"];
@@ -28,7 +29,7 @@ export class ClienteModificarComponent {
     this.inputIdModificar=this.idModificar;
     this.inputNombreModificar=this.cliente.nombre;
     this.inputCargoModificar=this.cliente.cargo;
-    // this.inputFotoModificar=this.cliente.foto;
+    this.inputFotoModificar=this.cliente.foto;
   }
 
   modificarCliente(){
@@ -40,7 +41,7 @@ export class ClienteModificarComponent {
     }
 
   this.servicioModificarCliente.modificarCliente(clienteModificado);
-
+  this.miRouter.navigate(['/clientes']);
   }
 
 }
