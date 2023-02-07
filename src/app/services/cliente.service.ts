@@ -8,6 +8,9 @@ export class ClienteService {
 
   constructor() { }
 
+  //variable login
+  login:number=0;
+
   //declarar la variable cliente array del tipo cliente
   clientes:Array<Cliente>=[
     {
@@ -52,6 +55,10 @@ getClientes(){
   return this.clientes;
 }
 
+getTotal(){
+  return this.clientes.length;
+}
+
 getcliente(id:number){
   let pos=this.clientes.findIndex(c=>c.id==id);
   return this.clientes[pos];
@@ -69,6 +76,10 @@ modificarCliente(cliente:Cliente){
 borrarCliente(id:number){
   let pos=this.clientes.findIndex(c=>c.id==id);
   this.clientes.splice(pos,1);
+}
+
+getLogin(){
+  return this.login;
 }
 
 
