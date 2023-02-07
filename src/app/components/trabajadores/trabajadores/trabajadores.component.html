@@ -1,0 +1,23 @@
+<p>trabajadores works!</p>
+
+<br>
+<p>Han pasado el id: {{idTrabajador}}</p>
+<br>
+<p>han pasado queryString: {{orden}} y {{ciudad}}</p>
+
+<div style="margin-left: 35%;">
+  <div class="color-primary"><h2>LISTADO DE trabajadores</h2></div>
+  <table class="border border-dark">
+    <td>
+    <tr *ngFor="let trabajador of trabajadores" class="border border-dark text-center" >
+      <td class="border border-dark">{{trabajador.idTrabajador}}</td>
+      <td class="border border-dark">{{trabajador.ciudad}}</td>
+    </tr>
+    </td>
+  </table>
+
+</div>
+<div class="text-center mt-5">
+  <button routerLink="/trabajadores/nuevo" class="btn btn-success m-2">Nuevo</button>
+  <button (click)="volverTrabajadores()" class="btn btn-secondary m-2">Volver</button>
+</div>

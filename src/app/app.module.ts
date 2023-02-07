@@ -12,6 +12,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './components/header/header.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FormsModule } from '@angular/forms';
+import { TrabajadoresComponent } from './components/trabajadores/trabajadores/trabajadores.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ClienteBorrarComponent,
     InicioComponent,
     HeaderComponent,
-    Error404Component
+    Error404Component,
+    TrabajadoresComponent
   ],
   imports: [
     BrowserModule,

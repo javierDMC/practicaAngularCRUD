@@ -7,14 +7,17 @@ import { ClienteComponent } from './components/clientes/cliente/cliente.componen
 import { ClientesComponent } from './components/clientes/clientes/clientes.component';
 import { Error404Component } from './components/error404/error404.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { TrabajadoresComponent } from './components/trabajadores/trabajadores/trabajadores.component';
+import { Guarda1Guard } from './Guards/guarda1.guard';
 
 const routes: Routes = [
   {path:"",component:InicioComponent},
-  {path:"clientes", component:ClientesComponent},
+  {path:"clientes",  canActivate:[Guarda1Guard], component:ClientesComponent},
   {path:"cliente/:id", component:ClienteComponent},
   {path:"clientes/nuevo", component:ClienteNuevoComponent},
   {path:"clientes/modificar/:id", component:ClienteModificarComponent},
   {path:"clientes/borrar/:id", component:ClienteBorrarComponent},
+  {path:'trabajadores', component:TrabajadoresComponent},
   //la ruta error siempre debe ser la ultima
   {path:"**",component:Error404Component}
 ];
