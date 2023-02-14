@@ -14,6 +14,8 @@ import { Error404Component } from './components/error404/error404.component';
 import { FormsModule } from '@angular/forms';
 import { TrabajadoresComponent } from './components/trabajadores/trabajadores/trabajadores.component';
 
+import { HttpClientModule } from '@angular/common/http/index'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { TrabajadoresComponent } from './components/trabajadores/trabajadores/tr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
